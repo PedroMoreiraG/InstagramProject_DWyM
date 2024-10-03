@@ -1,0 +1,141 @@
+*{
+  box-sizing: border-box;
+}
+
+.login-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(250,250,250);
+}
+
+.Instagram-logo{
+  width: 175px;
+  height: 75px;
+  margin: 15px 0;
+}
+.fb-logo{
+  width: 15px;
+  height: 15px;
+  margin: 30px 0;
+}
+.GooglePlay-logo{
+  width: 136px;
+  height: 40px;
+  margin-right: 5px;
+}
+.Microsoft-logo{
+width: 136px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+.box-1{
+  height: 400px;
+  width: 350px;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: rgb(255,255,255);
+}
+.box-2{
+  height: 63px;
+  width: 350px;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: rgb(255,255,255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+}
+
+input{
+  background-color: rgb(250,250,250);
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 13px;
+  padding: 9px 0 7px 8px;
+  height: 40px;
+  width: 260px;
+  border: 1px solid rgb(219, 219, 219);
+  outline: none;
+  margin: 5px 0;
+}
+.login-button{
+  border-radius: 4px;
+  background-color: rgba(0, 149, 246, 1);
+  color: rgb(255,255,255);
+  height: 30px;
+  width: 268px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.lines-box{
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10px;
+
+}
+.line-1{
+ 
+ width: 106px;
+ height: 1px;
+ background-color: #dbdbdb;
+ margin-right: 10px;
+ 
+}
+.line-2{
+ 
+  width: 106px;
+  height: 1px;
+  background-color: #dbdbdb;
+  margin-left: 10px;
+ }
+
+.fb-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  height: 50px;
+}
+
+.fb-link{
+  color: #385185;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.forgotten-password-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 20px;
+}
+.forgotten-password-link{
+  color: #385185;
+  font-size: 13px;
+  cursor: pointer;
+}
+.sign-up-span{
+  color: rgba(0, 149, 246, 1);
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+
+}
