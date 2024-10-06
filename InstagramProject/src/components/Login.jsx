@@ -1,10 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 import GooglePlayimg from '../assets/GooglePlayimg.png'
 import Microsoftimg from '../assets/Microsoftimg.png'
 import InstagramLogo from '../assets/Logo-Instagram.png'
 import fbimg from '../assets/fbimg.png'
 import '../../src/App'
+import './Login.css'
+
 export const Login = () => {
   return (
     <div className='login-container'>
@@ -44,7 +47,7 @@ export const Login = () => {
         </div>
         <div className='box-2'>
             <p>
-                ¿No tienes una cuenta? <span className='sign-up-span'>Regístrate</span>
+            ¿No tienes una cuenta? <Link to="/register" className='sign-up-span'>Regístrate</Link>
             </p>
         </div>
         <div className='get-app-box'>
