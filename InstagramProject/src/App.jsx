@@ -1,17 +1,21 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
-import './App.css'
-import { Login } from './components/Login';
+import "./App.css";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Login } from "./components/Login"; 
+import { Register } from "./pages/Register";
+
 
 function App() {
-
+ 
   return (
     <>
-      <div className='App'>
-        <Login/>
-      </div>
+
+      <Routes>
+        <Route path="/*" element={<Navigate replace to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </>
   );
 }
 
-export default App
+export default App;
