@@ -67,7 +67,7 @@ input{
 }
 .login-button{
   border-radius: 4px;
-  background-color: rgba(0, 149, 246, 1);
+  background-color:rgb(148, 206, 245);
   color: rgb(255,255,255);
   height: 30px;
   width: 268px;
@@ -79,6 +79,21 @@ input{
   cursor: pointer;
 }
 
+.login-button:hover{
+  border-radius: 4px;
+  background-color: rgba(0, 149, 246, 1);;
+  color: rgb(255,255,255);
+  height: 30px;
+  width: 268px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
 .lines-box{
   margin: 15px 0;
   display: flex;
@@ -86,7 +101,6 @@ input{
   justify-content: center;
   width: 100%;
   height: 10px;
-
 }
 .line-1{
  
@@ -139,3 +153,144 @@ input{
   cursor: pointer;
 
 }
+
+
+/* Feed */
+.feed{
+  display: flex;
+}
+.left-box{
+  width: 200px;
+  height: 100vh;
+  margin: 0;
+  border-right: 1px solid rgb(219, 219, 219);  
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  flex-direction: row;
+}
+.home-button{
+  text-align: left;
+  border-radius: 4px;
+  color: rgb(255,255,255);
+  background-color: white;
+  height: 30px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.home-button:hover{
+  text-align: left;
+  border-radius: 4px;
+  background-color: rgb(239, 240, 241);;
+  color: rgb(255,255,255);
+  height: 30px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+.notificaciones-button{
+  text-align: left;
+  border-radius: 4px;
+  color: rgb(255,255,255);
+  background-color: white;
+  height: 30px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.notificaciones-button:hover{
+  text-align: left;
+  border-radius: 4px;
+  background-color: rgb(239, 240, 241);;
+  color: rgb(255,255,255);
+  height: 30px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+.create-button{
+  text-align: left;
+  border-radius: 4px;
+  color: rgb(255,255,255);
+  background-color: white;
+  height: 30px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.create-button:hover{
+  text-align: left;
+  border-radius: 4px;
+  background-color: rgb(239, 240, 241);;
+  color: rgb(255,255,255);
+  height: 30px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+.profile-button{
+  text-align: left;
+  border-radius: 4px;
+  color: rgb(255,255,255);
+  background-color: white;
+  height: 30px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.profile-button:hover{
+  text-align: left;
+  border-radius: 4px;
+  background-color: rgb(239, 240, 241);;
+  color: rgb(255,255,255);
+  height: 30px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.Instagram-logo-feed{
+  width: 100px;
+  height: 50px;
+  margin: 5px 0;
+}
+
+
+
