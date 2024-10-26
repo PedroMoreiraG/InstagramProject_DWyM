@@ -1,12 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import './Feed.css';
+import InstagramLogo from '../assets/Logo-Instagram.png';
 
+import {useNavigate, Link } from 'react-router-dom';
 const Feed = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
+  const username = localStorage.getItem('username');
+  const id = localStorage.getItem('id');
    useEffect(() => {
     const fetchPosts = async () => {
       const token = localStorage.getItem('token'); 
@@ -47,7 +52,25 @@ const Feed = () => {
   }
 
   return (
-    
+    <div className='container'>
+       <div className='left-box'>
+         <div className='box-1-logo'>
+           <button className='home-img' onClick={() => navigate('/feed')}><img src={InstagramLogo} alt='#'className='Instagram-logo-feed'/></button>
+           </div>
+         <div className='home-button-box'>
+           <button className='home-button' onClick={() => navigate('/feed')}>Inicio</button>
+         </div>
+         <div className='notificaciones-button-box'>
+           <button className='notificaciones-button' onClick={() => navigate('/notificaciones')}>Notifications</button>
+         </div>
+         <div className='create-button-box'>
+           <button className='create-button' onClick={() =>  navigate('/create')}>Crear</button>
+         </div>
+         <div className='home-button-box'>
+           <button className='profile-button' onClick={()=> navigate(`/profile/${id}`)}>Perfil</button>
+         </div>
+       </div>
+
     <div className="feed-container">
       {posts.length === 0 ? (
         <p>No hay posts para mostrar.</p>
@@ -64,6 +87,7 @@ const Feed = () => {
           </div>
         ))
       )}
+    </div>
     </div>
   );
 };

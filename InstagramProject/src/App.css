@@ -172,10 +172,24 @@ input{
 .home-button{
   text-align: left;
   border-radius: 4px;
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
   background-color: white;
   height: 30px;
-  width: 100px;
+  width: 125px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+}
+.home-img{
+  text-align: left;
+  border-radius: 4px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  height: 30px;
+  width: 125px;
   border: 0;
   padding: 5px 9px;
   font-size: 14px;
@@ -188,9 +202,9 @@ input{
   text-align: left;
   border-radius: 4px;
   background-color: rgb(239, 240, 241);;
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
   height: 30px;
-  width: 100px;
+  width: 125px;
   border: 0;
   padding: 5px 9px;
   font-size: 14px;
@@ -201,10 +215,10 @@ input{
 .notificaciones-button{
   text-align: left;
   border-radius: 4px;
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
   background-color: white;
   height: 30px;
-  width: 100px;
+  width: 125px;
   border: 0;
   padding: 5px 9px;
   font-size: 14px;
@@ -217,9 +231,9 @@ input{
   text-align: left;
   border-radius: 4px;
   background-color: rgb(239, 240, 241);;
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
   height: 30px;
-  width: 100px;
+  width: 125px;
   border: 0;
   padding: 5px 9px;
   font-size: 14px;
@@ -230,10 +244,10 @@ input{
 .create-button{
   text-align: left;
   border-radius: 4px;
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
   background-color: white;
   height: 30px;
-  width: 100px;
+  width: 125px;
   border: 0;
   padding: 5px 9px;
   font-size: 14px;
@@ -246,9 +260,9 @@ input{
   text-align: left;
   border-radius: 4px;
   background-color: rgb(239, 240, 241);;
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
   height: 30px;
-  width: 100px;
+  width: 125px;
   border: 0;
   padding: 5px 9px;
   font-size: 14px;
@@ -259,10 +273,10 @@ input{
 .profile-button{
   text-align: left;
   border-radius: 4px;
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
   background-color: white;
   height: 30px;
-  width: 100px;
+  width: 125px;
   border: 0;
   padding: 5px 9px;
   font-size: 14px;
@@ -275,22 +289,109 @@ input{
   text-align: left;
   border-radius: 4px;
   background-color: rgb(239, 240, 241);;
-  color: rgb(255,255,255);
+  color: rgb(0, 0, 0);
   height: 30px;
-  width: 100px;
+  width: 125px;
   border: 0;
   padding: 5px 9px;
   font-size: 14px;
   font-weight: bold;
-  margin: 5px;
+  margin: 10px;
   cursor: pointer;
 }
 
 .Instagram-logo-feed{
   width: 100px;
   height: 50px;
-  margin: 5px 0;
 }
 
 
+/* Edit Profile */
+.container-edit{
+   display: flex;
+   background-color: rgb(250,250,250);  
+}
+.edit-container{
+  display: flex;
+  align-items: center;
+  justify-content: top;
+  text-align: left;
+  flex-direction: column;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(250,250,250);
+}
+.title-box{
+  text-align: left;
+  align-items: left;
+  justify-content: left;
 
+}
+.title-edit{
+  width: 100%;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+.box-photoedit{
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  width: 30%;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(237, 237, 237);;
+}
+
+.profileedit-img img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+.edit-username{
+display: flex;
+text-align: left;
+margin-top: 0px;
+margin-left: 20px;
+margin-right: 210px;
+font-size: 10px;
+font-family: Arial, Helvetica, sans-serif;
+} 
+
+.button-photoedit{
+  border-radius: 4px;
+  background-color:rgb(148, 206, 245);
+  color: rgb(255,255,255);
+  height: 25px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  margin-left: 25px;
+  margin-top: 13px;
+}
+
+.button-photoedit:hover{
+  border-radius: 4px;
+  background-color: rgba(0, 149, 246, 1);;
+  color: rgb(255,255,255);
+  height: 25px;
+  width: 100px;
+  border: 0;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  margin-left: 25px;
+  margin-top: 13px;
+}

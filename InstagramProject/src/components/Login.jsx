@@ -4,37 +4,47 @@ import GooglePlayimg from '../assets/GooglePlayimg.png'
 import Microsoftimg from '../assets/Microsoftimg.png'
 import InstagramLogo from '../assets/Logo-Instagram.png'
 import fbimg from '../assets/fbimg.png'
-import '../../src/App'
+import '../App'
 import { Link, useNavigate } from 'react-router-dom'
 export const Login = ({ onLogin }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
-
+    const token = localStorage.getItem('token');
     const handleLogin = async (e) => {
         e.preventDefault();
         setError('');
 
         try {
-            const response = await fetch ('http://localhost:3001/api/auth/login', {
+            const response = await fetch('http://localhost:3001/api/auth/login', {
                 method: 'POST',
-                headers:{'Content-Type': 'application/json'},
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`, 
+                },
                 body: JSON.stringify({ email, password }),
             });
             const data = await response.json();
-        if (response.ok) {
-          console.log('Login exitoso', data);// Guardar token 
-          navigate('/feed');
-        
-        } else {
-            setError(data.message || 'Error en el login');
-        }
+
+            if (response.ok) {
+                // Guarda el token en localStorage
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('username', data.username);
+                localStorage.setItem('id', data._id);
+
+                console.log('Login exitoso', data);
+                navigate('/feed'); // Redirige al feed
+
+                // Llama a onLogin si necesitas actualizar el estado global en tu aplicación
+                if (onLogin) onLogin(data);
+            } else {
+                setError(data.message || 'Error en el login');
+            }
         } catch (error) {
             setError('Error al conectar con el servidor');
         }
     };
-    
   return (
     <div className='login-container'>
         <div className='box-1'>
