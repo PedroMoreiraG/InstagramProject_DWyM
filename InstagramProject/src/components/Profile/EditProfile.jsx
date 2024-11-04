@@ -94,7 +94,7 @@ export const EditProfile = () => {
         
         <div className='box-photoedit'>
             <div className="profileedit-img">
-                <img src={Photo || Default} alt={`${username}'s avatar`} /> 
+                <img src={profilePicture || Default} alt={`${username}'s avatar`} /> 
             </div>
             <div className='edit-username'>
                 <h1>{username || user}</h1>

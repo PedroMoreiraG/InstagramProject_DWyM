@@ -8,34 +8,32 @@ import Default from '../../assets/Default.png';
 export const Profile = () => {
   const username = localStorage.getItem('username');
   const id = localStorage.getItem('id');
-  const photo = localStorage.getItem('photoProfile');
 
-  const [user, setUser] = useState({});
-
+  const [profileFriendData, setProfileFriendData] = useState({});
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  
   const navigate = useNavigate();
+  const [profilePhoto, setProfilePhoto] = useState(Default);
 
   useEffect(() => {
-    const fetchProfileData = async () => {
+    const fetchProfileData = async (friendId) => {
       const token = localStorage.getItem('token');
       try {
-        const response = await fetch(`http://localhost:3001/api/user/profile/${id}`, {
+        const response = await fetch(`http://localhost:3001/api/user/profile/${friendId}`, {
           method: 'GET',
           headers: {
-            Authorization: `Bearer ${token}`,
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json',
           },
         });
 
         const data = await response.json();
-        
+
         if (response.ok) {
-          setUser(data);
-          console.log(data);
-          console.log(user);
+          setProfileFriendData(data);
+          setProfilePhoto(data.profilePicture);
+          localStorage.setItem('photoProfileFriend', data.profilePicture); // Guardar en localStorage
         } else {
           setError('Error al cargar el perfil');
         }
@@ -80,14 +78,14 @@ export const Profile = () => {
         <div className='profile-info'>
           <div className="profile-img">
             <img 
-              src={user.user.profilePicture || Default } 
+              src={profilePhoto || localStorage.getItem('photoProfile')} 
               alt="Profile" 
             />
           </div>
           <div className='profile-data'>
             <div className='profile-settings'>
               <div className='profile-username'>
-                <h1>{user.user.username || username}</h1>
+                <h1>{profileFriendData.username || username}</h1>
               </div>
               <div className='edit-box'>
                 <button className='button' onClick={() => navigate('/editprofile')}>Editar Perfil</button>
@@ -98,11 +96,11 @@ export const Profile = () => {
             </div>
             <div className="profile-stats">
               <span>{posts.length} Posts</span>
-              <span>{user.user.friends.length || '0'} Followers</span>
-              <span>{user.user.friends.length || '0'} Following</span>
+              <span>{profileFriendData.friends || '0'} Followers</span>
+              <span>{profileFriendData.friends || '0'} Following</span>
             </div>
             <div className='profile-bio'>
-              <p>{'Bienvenidos a mi perfil'}</p>
+              <p>{profileFriendData.bio || 'Bienvenidos a mi perfil'}</p>
             </div>
           </div>
         </div>

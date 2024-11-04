@@ -2,12 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import './AddFriends.css';
 import InstagramLogo from '../assets/Logo-Instagram.png';
+import Default from '../assets/Default.png';
 import { useNavigate } from 'react-router-dom';
 const AddFriend = () => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState('');
   const id = localStorage.getItem('id');
-const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchUsers = async () => {
         const token = localStorage.getItem('token');
@@ -86,9 +87,9 @@ const navigate = useNavigate();
       <div className="user-cards-container">
         {users.map((user) => (
           <div className="user-card" key={user.id}>
-            <img src={user.profilePicture || 'default-profile.jpg'} alt={`${user.username}'s profile`} className="profile-picture" />
+            <img src={user.profilePicture || Default} alt={`${user.username}'s profile`} className="profile-picture" />
             <h3>@{user.username}</h3>
-            <button onClick={() => handleAddFriend(user.id)}>Agregar Amigo</button>
+            <button onClick={() => handleAddFriend(user._id)}>Agregar Amigo</button>
           </div>
         ))}
       </div>

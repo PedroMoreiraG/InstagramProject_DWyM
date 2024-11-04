@@ -32,6 +32,7 @@ export const Login = ({ onLogin }) => {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('username', data.username);
                 localStorage.setItem('id', data._id);
+                localStorage.setItem('photoProfile', data.profilePicture);
 
                 console.log('Login exitoso', data);
                 navigate('/feed'); // Redirige al feed
