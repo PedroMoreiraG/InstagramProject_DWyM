@@ -1,0 +1,66 @@
+.add-friend-page {
+    display: flex;
+  align-items: center;
+  justify-content: top;
+  text-align: left;
+  flex-direction: column;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .title{
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .user-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .user-card {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.2s;
+  }
+  
+  
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .user-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .user-card button {
+    padding: 8px 16px;
+    background-color:rgb(148, 206, 245);
+    color: rgb(255,255,255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .user-card button:hover {
+    border-radius: 4px;
+  background-color: rgba(0, 149, 246, 1);;
+  color: rgb(255,255,255);
+  }
+  

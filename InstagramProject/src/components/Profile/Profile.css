@@ -30,6 +30,7 @@ span{
     height: 120px;
     margin-top: 20px;
     margin-right: 0px;
+    border: 2px solid red;
   }
  .profile-username{
   display: flex;
@@ -96,4 +97,41 @@ span{
     cursor: pointer;
     margin-left: 25px;
     margin-top: 20px;
+  }
+
+
+  .buttonadd{
+    border-radius: 4px;
+    background-color:rgb(237, 237, 237);
+    color: rgb(0, 0, 0);
+    height: 25px;
+    width: 120px;
+    border: 0;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-top: 20px;
+  }
+  
+  
+  .buttonadd:hover{
+    border-radius: 4px;
+    background-color: rgb(187, 187, 187);;
+    color: rgb(0, 0, 0);
+    height: 25px;
+    width: 120px;
+    border: 0;
+    padding: 5px 9px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-top: 20px;
+  }
+  .add-box{
+    width:200px;
   }

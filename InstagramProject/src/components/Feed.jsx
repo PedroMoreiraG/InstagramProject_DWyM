@@ -60,12 +60,9 @@ const Feed = () => {
          <div className='home-button-box'>
            <button className='home-button' onClick={() => navigate('/feed')}>Inicio</button>
          </div>
-         <div className='notificaciones-button-box'>
-           <button className='notificaciones-button' onClick={() => navigate('/notificaciones')}>Notifications</button>
-         </div>
          <div className='create-button-box'>
-           <button className='create-button' onClick={() =>  navigate('/create')}>Crear</button>
-         </div>
+          <button className='create-button' onClick={() => navigate('/addfriend')}>Agregar</button>
+        </div>
          <div className='home-button-box'>
            <button className='profile-button' onClick={()=> navigate(`/profile/${id}`)}>Perfil</button>
          </div>

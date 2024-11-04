@@ -6,6 +6,7 @@ import { Login } from './components/Login';
 import Signup from './components/Signup'
 import Feed from './components/Feed';
 import {EditProfile } from './components/Profile/EditProfile';
+import AddFriend from './components/AddFriends';
 import './App.css'
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Login onLogin={handleLogin} />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/editprofile" element={<EditProfile />} />
+        <Route path="/addfriend" element={<AddFriend />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route
           path="/feed"
