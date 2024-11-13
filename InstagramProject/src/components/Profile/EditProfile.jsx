@@ -119,6 +119,7 @@ export const EditProfile = () => {
           type="file"
           accept="image/*"
           onChange={handleImageChange}
+          required
         />
         {profilePicture && (
           <div>
@@ -128,8 +129,8 @@ export const EditProfile = () => {
           <input
           type="text"
           value={username}
-          required
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
           <button
           className="add-button"

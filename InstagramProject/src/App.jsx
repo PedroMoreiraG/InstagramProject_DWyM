@@ -7,6 +7,7 @@ import Signup from './components/Signup'
 import Feed from './components/Feed';
 import {EditProfile } from './components/Profile/EditProfile';
 import AddFriend from './components/AddFriends';
+import FriendProfile from './components/Profile/FriendProfile';
 import './App.css'
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -30,6 +31,7 @@ function App() {
         <Route path="/editprofile" element={<EditProfile />} />
         <Route path="/addfriend" element={<AddFriend />} />
         <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/profileFriend/:id" element={<FriendProfile />} />
         <Route
           path="/feed"
           element={<Feed onLogout={handleLogout} />}

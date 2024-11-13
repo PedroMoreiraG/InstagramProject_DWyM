@@ -6,8 +6,9 @@ import InstagramLogo from '../../assets/Logo-Instagram.png';
 import Default from '../../assets/Default.png';
 
 export const Profile = () => {
+
   const username = localStorage.getItem('username');
-  const id = localStorage.getItem('id');
+  const  id  =  localStorage.getItem('id');
   const photo = localStorage.getItem('photoProfile');
 
   const [user, setUser] = useState({});
@@ -34,6 +35,8 @@ export const Profile = () => {
         
         if (response.ok) {
           setUser(data);
+          localStorage.setItem('friends', JSON.stringify(data.user.friends));
+          console.log('friends', localStorage.getItem('friends'));
           console.log(data);
           console.log(user);
         } else {
@@ -98,8 +101,7 @@ export const Profile = () => {
             </div>
             <div className="profile-stats">
               <span>{posts.length} Posts</span>
-              <span>{user.user.friends.length || '0'} Followers</span>
-              <span>{user.user.friends.length || '0'} Following</span>
+              <span>{user.user.friends.length || '0'} Amigos</span>
             </div>
             <div className='profile-bio'>
               <p>{'Bienvenidos a mi perfil'}</p>

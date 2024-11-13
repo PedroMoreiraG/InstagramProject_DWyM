@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './AddFriends.css';
 import InstagramLogo from '../assets/Logo-Instagram.png';
 import Default from '../assets/Default.png';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const AddFriend = () => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState('');
@@ -26,6 +26,7 @@ const AddFriend = () => {
         
         if (response.ok) {
           setUsers(data.flat()); 
+          
         } else {
           setUsers([]); 
           setError('Error al cargar la lista de usuarios');
@@ -86,9 +87,9 @@ const AddFriend = () => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <div className="user-cards-container">
         {users.map((user) => (
-          <div className="user-card" key={user.id}>
+          <div className="user-card" key={user._id}>
             <img src={user.profilePicture || Default} alt={`${user.username}'s profile`} className="profile-picture" />
-            <h3>@{user.username}</h3>
+            <Link to={`/profileFriend/${user._id}`}><h3>@{user.username}</h3></Link>
             <button onClick={() => handleAddFriend(user._id)}>Agregar Amigo</button>
           </div>
         ))}
