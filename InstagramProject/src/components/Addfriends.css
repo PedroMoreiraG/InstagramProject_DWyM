@@ -1,10 +1,11 @@
 .add-friend-page {
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: top;
   text-align: left;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
+  margin-left: 300px;
   font-family: Arial, Helvetica, sans-serif;
   }
   

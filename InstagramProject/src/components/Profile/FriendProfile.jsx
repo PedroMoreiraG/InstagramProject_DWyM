@@ -12,10 +12,43 @@ export const FriendProfile = () => {
   const [user, setUser] = useState({});
   const [isFriend, setIsFriend] = useState(false);
   const [posts, setPosts] = useState([]);
+  const [postCount, setPostCount] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   const navigate = useNavigate();
+
+  const fetchPosts = async () => {
+    try {
+      // Obtén el token del almacenamiento local
+      const token = await localStorage.getItem("token");
+      if (!token) throw new Error("Token no encontrado");      
+
+      // Fetch para obtener todos los posts
+      const response = await fetch("http://localhost:3001/api/posts/feed", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) throw new Error("Error al obtener el feed");
+
+      const allPosts = await response.json();
+
+      console.log(allPosts);
+
+      // Filtra los posts del usuario logueado
+      const filteredPosts = allPosts.filter(post => post.user._id === id);
+
+      // Actualiza el estado con los posts filtrados
+      setPosts(filteredPosts);
+      console.log(posts);
+      setPostCount(filteredPosts.length);
+      console.log(postCount);
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  };
 
   useEffect(() => {
     const fetchProfileData = async () => {
@@ -50,6 +83,7 @@ export const FriendProfile = () => {
 
     if (id) {
       fetchProfileData();
+      fetchPosts();
     } else {
       setError("ID de usuario no encontrado en la URL");
       setLoading(false);
@@ -145,7 +179,7 @@ export const FriendProfile = () => {
 
         <div className="profile-posts">
           {posts.map((post, index) => (
-            <img key={index} src={post.imageUrl} alt={`Post ${index}`} className="post-image" />
+            <img key={index} src={`http://localhost:3001/${post.imageUrl.split("\\").join("/")}`} alt={`Post ${index}`} className="post-image" />
           ))}
         </div>
       </div>

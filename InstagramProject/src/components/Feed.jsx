@@ -73,13 +73,21 @@ const Feed = () => {
         <p>No hay posts para mostrar.</p>
       ) : (
         posts.map(post => (
-          <div key={post._id} className="post">
+          <div key={post._id} className="post-container">
+            <div className='post'>
             <div className="post-header">
-              <h4>{post.username}</h4>
+              <img src={`${post.user.profilePicture}`}/>
+              <Link  className='link' to={`/profileFriend/${post.user._id}`}><h4>{post.user.username}</h4></Link>
               <span>{new Date(post.createdAt).toLocaleString()}</span>
             </div>
             <div className="post-image">
-              <img src={post.imageUrl} alt="Post" />
+              <img src={`http://localhost:3001/${post.imageUrl.split("\\").join("/")}`} alt="Post" />
+            </div>
+            </div>
+            <div className='post-description'>
+              <h4>{post.user.username}</h4>
+              <h3>{post.caption}</h3>
+              
             </div>
           </div>
         ))

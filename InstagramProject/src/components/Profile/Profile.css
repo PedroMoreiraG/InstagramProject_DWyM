@@ -1,10 +1,8 @@
 .profile{
-  display: flex;
-  justify-content: center;
-  
+  display: flex;  
 }
 .profile-box{
-  margin-left: 240px; /* Deja espacio para la sidebar */
+  margin-left: 400px; 
   width: 100%;
 }
 .profile-info{
@@ -41,30 +39,34 @@ span{
  } 
   .profile-stats {
     display: flex;
-    justify-content: space-around;
-    margin: 5px 0;
+    /* justify-content: space-around; */
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
   }
   .profile-bio{
     margin-left: 100px;
     margin-top: 30px;
+    margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
   }
   
   .profile-posts {
     display: flex;
     flex-wrap: wrap;
+    
   }
-  
+  .profile-data{
+    justify-content: center;
+  }
   .profile-posts img {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
+    width: 250px;
+    height: 250px;
+    margin: 2px;
     object-fit: cover;
   }
   .profile-settings{
     display: flex;
-    margin: 10px;
+    margin: 5px;
   }
 
   .button{

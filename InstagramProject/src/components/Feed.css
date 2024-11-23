@@ -1,6 +1,7 @@
 .container{
   display: flex;
 }
+
 .feed-container {
     display: flex;
     flex-direction: column;
@@ -8,37 +9,77 @@
     margin: 0 auto;
     max-width: 600px;
   }
-  
   .post {
-    width: 100%;
+    width: 400px;
+    height: 400px;
     background-color: white;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    margin-bottom: 90px;
+    
   }
   
   .post-header {
-    padding: 10px;
+    padding: 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    
   }
   
   .post-header h4 {
-    margin: 0;
+    margin-left: 10px;
     font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
+  .post-description h3 {
+    margin-left: 10px;
+    align-content: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+
+  .post-description h4 {
+    
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   .post-header span {
     font-size: 12px;
     color: #999;
+    margin-left: 150px;
   }
-  
+
+  .post-header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+  }
+
+  .post-image {
+    justify-content: center;
+    align-content: center;
+    
+  }
+
   .post-image img {
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .post-description{
+    
+    padding: 1px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
   }
   
   .post-caption {
@@ -48,4 +89,8 @@
   .post-caption p {
     margin: 0;
     font-size: 14px;
+  }
+  .link {
+    font-weight: bold;
+    color: black;
   }

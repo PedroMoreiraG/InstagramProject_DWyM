@@ -81,7 +81,7 @@ export const EditProfile = () => {
           <button className='home-button' onClick={() => navigate('/feed')}>Inicio</button>
         </div>
         <div className='create-button-box'>
-          <button className='create-button' onClick={() => navigate('/addfirend')}>Agregar</button>
+          <button className='create-button' onClick={() => navigate('/addfriend')}>Agregar</button>
         </div>
         <div className='home-button-box'>
           <button className='profile-button' onClick={() => navigate(`/profile/${id}`)}>Perfil</button>
